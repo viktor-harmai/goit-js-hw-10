@@ -27,11 +27,7 @@ function onFetchError(error) {
   Notify.failure('Oops, there is no country with that name');
 }
 
-//========================renderCountrycard====================================================================
-
 function renderCountry(name) {
-  // console.log(name.length);
-
   if (name.length > 10) {
     refs.countryInfo.innerHTML = '';
     refs.countryList.innerHTML = '';
@@ -39,12 +35,9 @@ function renderCountry(name) {
   } else if (name.length >= 2 && name.length <= 10) {
     markupCountryList(name);
     refs.countryInfo.innerHTML = '';
-
-    //console.log('выводим перечень стран', name);
   } else {
     markupCountryCard(name);
     refs.countryList.innerHTML = '';
-    //console.log('выводим карточку страны', name);
   }
 }
 
